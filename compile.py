@@ -91,6 +91,8 @@ def copy_original_bin(dir, target_bin, change_name=None):
     else:
         target_pn = os.path.join(ORI_BIN_DIR, change_name)
 
+    mkdirs(target_pn)
+
     print "cp %s %s" % (pn, target_pn)
     os.system("cp %s %s" % (pn, target_pn))
     os.system("chmod +x %s" % target_pn)
